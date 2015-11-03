@@ -28,11 +28,11 @@
 		"P9.27",	/* mcasp0_fsr		receive frameclock */
 		"P9.25",	/* mcasp0_ahclkx 	masterclock */
 		/* spi */
-		"P8.28",	/* spi_sclk */
-		"P8.30",	/* spi_mosi */
-		"P8.29",	/* spi_miso */
-		"P8.27",	/* spi_cs0 */
-		"P8.26",	/* spi_cs1 */
+		"P8.32",	/* spi_sclk */
+		"P8.33",	/* spi_mosi */
+		"P8.14",	/* spi_miso */
+		"P8.17",	/* spi_cs0 */
+		"P8.31",	/* spi_cs1 */
 		/* the hardware ip uses */
 		"mcasp0", "spi_gpio";
 
@@ -53,11 +53,11 @@
 
 			audiocard_spi_pins: pinmux_audiocard_spi_pins { 
 				pinctrl-single,pins = <
-					0x0B4 0x37		/* spi_sclk, 	MODE7 | INPUT_PULLUP | SPI_SCLK P8_28 */
-                    0x0A8 0x37		/* spi_miso, 	MODE7 | INPUT_PULLUP | SPI_MISO P8_29 */
-                    0x0AC 0x17		/* spi_mosi, 	MODE7 | OUTPUT_PULLUP | SPI_MOSI P8_30 */
-                    0x0B0 0x17		/* spi_cs0, 	MODE7 | OUTPUT_PULLUP | SPI_CS0 P8_27 */
-					0x0BC 0x17		/* spi_cs1,		MODE7 | OUTPUT_PULLUP | SPI_CS1 P8_26 */
+					0x0DC 0x37		/* spi_sclk, 	MODE7 | INPUT_PULLUP | SPI_SCLK P8_28 */
+                    0x028 0x37		/* spi_miso, 	MODE7 | INPUT_PULLUP | SPI_MISO P8_29 */
+                    0x0D4 0x17		/* spi_mosi, 	MODE7 | OUTPUT_PULLUP | SPI_MOSI P8_30 */
+                    0x02C 0x17		/* spi_cs0, 	MODE7 | OUTPUT_PULLUP | SPI_CS0 P8_27 */
+					0x0D8 0x17		/* spi_cs1,		MODE7 | OUTPUT_PULLUP | SPI_CS1 P8_26 */
 				>;
 			};
 		};
@@ -74,13 +74,13 @@
 			#address-cells = <1>;
 			#size-cells = <0>;
 
-			ad193x: ad193x@0{
+			ad193x: ad193x@1{
 				#address-cells = <1>;
 				#size-cells = <0>;
 
 				compatible = "analog,ad1938";
 
-				reg = <0>; //corresponds to cs
+				reg = <1>; //corresponds to cs
 				spi-max-frequency = <100000>;
 			};
 		};
