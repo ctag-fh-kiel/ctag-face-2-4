@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name modules)(type KiCad)(uri ..\..\codec-board\libs\modules.pretty)(options "")(descr ""))
+)

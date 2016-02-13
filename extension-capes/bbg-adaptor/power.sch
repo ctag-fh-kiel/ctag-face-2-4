@@ -1,0 +1,376 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:AudioBoardLib
+LIBS:ad1938-audio-card-lib
+LIBS:bbg-adaptor-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title "BBG-Cape"
+Date "2015-12-23"
+Rev "A"
+Comp "www.creative-technologies.de"
+Comment1 "Robert Manzke"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BARREL_JACK CON201
+U 1 1 56791998
+P 1800 1750
+F 0 "CON201" H 1800 2000 60  0000 C CNN
+F 1 "BARREL_JACK" H 1800 1550 60  0000 C CNN
+F 2 "modules:BARELL_CLIFF_DC10L" H 1800 1750 60  0001 C CNN
+F 3 "" H 1800 1750 60  0000 C CNN
+	1    1800 1750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2100 1750 3000 1750
+Wire Wire Line
+	2100 1850 3000 1850
+$Comp
+L CONN_01X02 P202
+U 1 1 56791AAD
+P 2350 3300
+F 0 "P202" H 2300 3450 50  0000 C CNN
+F 1 "BBG_PWR" V 2450 3300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 2350 3300 60  0001 C CNN
+F 3 "" H 2350 3300 60  0000 C CNN
+	1    2350 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +VEXT #PWR203
+U 1 1 56791AB4
+P 2000 3050
+F 0 "#PWR203" H 2000 2900 50  0001 C CNN
+F 1 "+VEXT" H 2000 3190 50  0000 C CNN
+F 2 "" H 2000 3050 60  0000 C CNN
+F 3 "" H 2000 3050 60  0000 C CNN
+	1    2000 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG203
+U 1 1 56791ABA
+P 1650 3050
+F 0 "#FLG203" H 1650 3145 50  0001 C CNN
+F 1 "PWR_FLAG" H 1650 3230 50  0000 C CNN
+F 2 "" H 1650 3050 60  0000 C CNN
+F 3 "" H 1650 3050 60  0000 C CNN
+	1    1650 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDEXT #PWR204
+U 1 1 56791AC0
+P 1750 3400
+F 0 "#PWR204" H 1750 3150 50  0001 C CNN
+F 1 "GNDEXT" H 1750 3250 50  0000 C CNN
+F 2 "" H 1750 3400 60  0000 C CNN
+F 3 "" H 1750 3400 60  0000 C CNN
+	1    1750 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 2000 3200
+Wire Wire Line
+	1650 3200 1650 3050
+Wire Wire Line
+	2000 3200 1650 3200
+Wire Wire Line
+	2000 3050 2000 3350
+Wire Wire Line
+	2000 3350 2150 3350
+Wire Wire Line
+	1750 3250 1750 3400
+Wire Wire Line
+	2150 3250 1750 3250
+$Comp
+L RS3-0505 U201
+U 1 1 567926F1
+P 3200 1900
+F 0 "U201" H 3300 2250 60  0000 C CNN
+F 1 "RS3-0505" H 3500 2150 60  0000 C CNN
+F 2 "modules:RS3-0505" H 3200 1900 60  0001 C CNN
+F 3 "" H 3200 1900 60  0000 C CNN
+	1    3200 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1650 2400 1650
+Wire Wire Line
+	2400 1400 2400 1750
+Connection ~ 2400 1750
+$Comp
+L C C201
+U 1 1 567929F2
+P 4850 1950
+F 0 "C201" H 4875 2050 50  0000 L CNN
+F 1 "C" H 4875 1850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 4888 1800 30  0001 C CNN
+F 3 "" H 4850 1950 60  0000 C CNN
+	1    4850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C202
+U 1 1 56792A77
+P 5050 1950
+F 0 "C202" H 5075 2050 50  0000 L CNN
+F 1 "C" H 5075 1850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 5088 1800 30  0001 C CNN
+F 3 "" H 5050 1950 60  0000 C CNN
+	1    5050 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C203
+U 1 1 56792AA2
+P 5850 1950
+F 0 "C203" H 5875 2050 50  0000 L CNN
+F 1 "C" H 5875 1850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 5888 1800 30  0001 C CNN
+F 3 "" H 5850 1950 60  0000 C CNN
+	1    5850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C204
+U 1 1 56792AE4
+P 6050 1950
+F 0 "C204" H 6075 2050 50  0000 L CNN
+F 1 "C" H 6075 1850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 6088 1800 30  0001 C CNN
+F 3 "" H 6050 1950 60  0000 C CNN
+	1    6050 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR_SMALL L201
+U 1 1 56792B08
+P 5450 1650
+F 0 "L201" H 5450 1750 50  0000 C CNN
+F 1 "tbd" H 5450 1600 50  0000 C CNN
+F 2 "modules:LPS4018" H 5450 1650 60  0001 C CNN
+F 3 "" H 5450 1650 60  0000 C CNN
+	1    5450 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1750 5050 1750
+Wire Wire Line
+	5050 1650 5050 1800
+Wire Wire Line
+	5200 1650 5050 1650
+Connection ~ 5050 1750
+Wire Wire Line
+	4850 1400 4850 1800
+Connection ~ 4850 1750
+Wire Wire Line
+	5700 1650 7100 1650
+Wire Wire Line
+	5850 1650 5850 1800
+Wire Wire Line
+	6050 1400 6050 1800
+Connection ~ 5850 1650
+Wire Wire Line
+	4000 1850 4600 1850
+Wire Wire Line
+	4600 1850 4600 2200
+Wire Wire Line
+	4550 2200 7100 2200
+Wire Wire Line
+	6050 2200 6050 2100
+$Comp
+L GND #PWR202
+U 1 1 56792C54
+P 5500 2350
+F 0 "#PWR202" H 5500 2100 50  0001 C CNN
+F 1 "GND" H 5500 2200 50  0000 C CNN
+F 2 "" H 5500 2350 60  0000 C CNN
+F 3 "" H 5500 2350 60  0000 C CNN
+	1    5500 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 2200 5500 2350
+Connection ~ 5500 2200
+Wire Wire Line
+	5050 2100 5050 2200
+Connection ~ 5050 2200
+Wire Wire Line
+	4850 2100 4850 2200
+Connection ~ 4850 2200
+Wire Wire Line
+	5850 2100 5850 2200
+Connection ~ 5850 2200
+$Comp
+L Jumper_NC_Small JP201
+U 1 1 56792D18
+P 5450 1400
+F 0 "JP201" H 5450 1480 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 5460 1340 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 5450 1400 60  0001 C CNN
+F 3 "" H 5450 1400 60  0000 C CNN
+	1    5450 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 1400 5350 1400
+Wire Wire Line
+	5550 1400 6050 1400
+Connection ~ 6050 1650
+Text Notes 4950 1200 0    60   ~ 0
+Use to bypass PI-Filter
+$Comp
+L CONN_01X01 P201
+U 1 1 56792FAF
+P 2900 2350
+F 0 "P201" H 2900 2450 50  0000 C CNN
+F 1 "CTRL" V 3000 2350 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 2900 2350 60  0001 C CNN
+F 3 "" H 2900 2350 60  0000 C CNN
+	1    2900 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3000 1950 2900 1950
+Wire Wire Line
+	2900 1950 2900 2150
+$Comp
+L +5V #PWR201
+U 1 1 56793413
+P 6450 1600
+F 0 "#PWR201" H 6450 1450 50  0001 C CNN
+F 1 "+5V" H 6450 1740 50  0000 C CNN
+F 2 "" H 6450 1600 60  0000 C CNN
+F 3 "" H 6450 1600 60  0000 C CNN
+	1    6450 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 1650 6450 1600
+$Comp
+L PWR_FLAG #FLG201
+U 1 1 56793938
+P 6800 1600
+F 0 "#FLG201" H 6800 1695 50  0001 C CNN
+F 1 "PWR_FLAG" H 6800 1780 50  0000 C CNN
+F 2 "" H 6800 1600 60  0000 C CNN
+F 3 "" H 6800 1600 60  0000 C CNN
+	1    6800 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 1650 6800 1600
+Connection ~ 6450 1650
+$Comp
+L PWR_FLAG #FLG202
+U 1 1 56793B71
+P 6550 2150
+F 0 "#FLG202" H 6550 2245 50  0001 C CNN
+F 1 "PWR_FLAG" H 6550 2330 50  0000 C CNN
+F 2 "" H 6550 2150 60  0000 C CNN
+F 3 "" H 6550 2150 60  0000 C CNN
+	1    6550 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2200 6550 2150
+Connection ~ 6050 2200
+$Comp
+L CONN_01X02 P203
+U 1 1 56792FC1
+P 7500 1850
+F 0 "P203" H 7500 2000 50  0000 C CNN
+F 1 "PWR" V 7600 1850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7500 1850 50  0001 C CNN
+F 3 "" H 7500 1850 50  0000 C CNN
+	1    7500 1850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7100 1650 7100 1800
+Wire Wire Line
+	7100 1800 7300 1800
+Connection ~ 6800 1650
+Wire Wire Line
+	7300 1900 7100 1900
+Wire Wire Line
+	7100 1900 7100 2200
+Connection ~ 6550 2200
+$Comp
+L Jumper_NC_Small JP202
+U 1 1 5679446E
+P 3500 1400
+F 0 "JP202" H 3500 1480 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 3510 1340 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 3500 1400 50  0001 C CNN
+F 3 "" H 3500 1400 50  0000 C CNN
+	1    3500 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1400 3400 1400
+Connection ~ 2400 1650
+Connection ~ 4850 1400
+$Comp
+L Jumper_NC_Small JP203
+U 1 1 56794770
+P 3500 2150
+F 0 "JP203" H 3500 2230 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 3510 2090 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 3500 2150 50  0001 C CNN
+F 3 "" H 3500 2150 50  0000 C CNN
+	1    3500 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1850 2400 2650
+Wire Wire Line
+	2400 2650 3300 2650
+Wire Wire Line
+	3300 2650 3300 2150
+Wire Wire Line
+	3300 2150 3400 2150
+Connection ~ 2400 1850
+Wire Wire Line
+	3600 2150 4550 2150
+Wire Wire Line
+	4550 2150 4550 2200
+Connection ~ 4600 2200
+Text Notes 3050 1100 0    60   ~ 0
+Bypass DC/DC Converter
+$EndSCHEMATC
