@@ -1,5 +1,5 @@
 # Quick Start Guide for SD Card Image 
-## SD card preparation
+## SD Card Preparation
 1. Download [Debian Wheezy SD card image](https://drive.google.com/file/d/0B2goLqs_HZ3QLUpqd3NZS1FBOTQ/view?usp=sharing)
 2. Install Debian image on SD card (see [Raspberry Pi Guide](https://www.raspberrypi.org/documentation/installation/installing-images/README.md))
 
