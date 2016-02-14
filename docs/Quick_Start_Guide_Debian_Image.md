@@ -18,9 +18,9 @@ alsamixer has a dialog based GUI and is simpler, but amixer is more detailed.
 The soundcard offers different playback de-emphasis modes, ADC high pass filter configuration and volume controls for single ADCs and DACs.
 
 ### Automatic Evaluation
-The scripts for automatic evaluation of the audio system are located in /home/debian/automated_test.
+The scripts for the automatic evaluation of the audio system are located in /home/debian/automated_test.
 The results will be saved in /home/debian/automated_test/results.
-See [Evaluation_Script.md](https://github.com/ctag-fh-kiel/ctag-face-2-4/blob/master/docs/Evaluation_Script.md) for more details.
+See the [Manual for Automatic Evaluation](https://github.com/ctag-fh-kiel/ctag-face-2-4/blob/master/docs/Automatic_Evaluation_Manual.md) for more details.
 
 ### Demo Surround-Delay Audio Effect
 The Surround-Delay effect can be executed by running the following command from the home directory of user "debian":
