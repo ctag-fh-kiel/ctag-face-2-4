@@ -23,5 +23,5 @@ from the home directory of user "debian".
 1. ALSA Playback Device (e.g. hw:0)
 2. ALSA Capture Device
 3. Name of soundcard to be tested (will be used in spectrum plots)
-4. *Name of single test (latency, thd, crosstalk, frequency-response ) (optional)*
+4. *Name of single test (latency, thd, crosstalk, frequency-response) (optional)*
 
