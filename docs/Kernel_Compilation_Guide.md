@@ -1,4 +1,4 @@
-# Kernel Build Guide
+# BeagleBone Green/Black Kernel Compilation Guide
 
 *The build instructions were tested on Ubuntu 14.04.*
 
@@ -62,7 +62,7 @@ mkdir -p ~/mnt/rootfs/boot/dtbs/4.1.10+ && cp -r arch/arm/boot/dts/*.dtb ~/mnt/r
 ```bash
 cp .config ~/mnt/rootfs/boot/config-4.1.10+
 ```
-+ Copy Bone Cape for I<sup>2</sup>S multichannel soundcard to SD card
++ Copy Bone Cape for CTAG face2|4 Audio Card to SD card
 ```bash
 cp BBB-AD193X-* ~/mnt/rootfs/root
 ```
@@ -80,12 +80,12 @@ git clone https://github.com/beagleboard/bb.org-overlays && cd ./bb.org-overlays
 ./dtc-overlay.sh
 ./install.sh
 ```
-+ Compile Bone Cape for I<sup>2</sup>S multichannel soundcard
++ Compile Bone Cape for CTAG face2|4 Audio Card
 ```bash
 dtc -O dtb -o BBB-AD193X-8TDM-00A0.dtbo -b 0 -@ BBB-AD193X-8TDM-00A0.dts
 mv BBB-AD193X-8TDM-00A0.dtbo /lib/firmware
 ```
-+ Load Bone Cape for I<sup>2</sup>S multichannel soundcard with Bone-Cape-Manager
++ Load Bone Cape forCTAG face2|4 Audio Card with Bone-Cape-Manager
 ```bash
 sh -c "echo 'BBB-AD193X-8TDM' > /sys/devices/platform/bone_capemgr/slots"
 ```
