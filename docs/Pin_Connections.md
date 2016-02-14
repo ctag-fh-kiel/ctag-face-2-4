@@ -1,6 +1,6 @@
 ## BeagleBone Black/Green <-> CTAG face2|4 Pin Connections 
 
-| I<sup>2</sup>S Soundcard Pin Name | I<sup>2</sup>S Soundcard Pin No. |BB Black/Green Pin No. | BB Black/Green Mode Name | BB Black/Green Pin Name |
+| CTAG face2&#124;4 Pin Name | CTAG face2&#124;4 Pin No. |BB Black/Green Pin No. | BB Black/Green Mode Name | BB Black/Green Pin Name |
 | ---------------------- |:------------:|:------------:| --------------- | ------------ |
 | DLRCLK                 | 10           | P9.29 Mode 0 | mcasp0_fsx      | SPI1_DO      |
 | DBCLK                  | 8            | P9.31 Mode 0 | mcasp0_aclkx    | SPI1_SCLK    |
