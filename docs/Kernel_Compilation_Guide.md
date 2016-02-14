@@ -85,7 +85,7 @@ git clone https://github.com/beagleboard/bb.org-overlays && cd ./bb.org-overlays
 dtc -O dtb -o BBB-AD193X-8TDM-00A0.dtbo -b 0 -@ BBB-AD193X-8TDM-00A0.dts
 mv BBB-AD193X-8TDM-00A0.dtbo /lib/firmware
 ```
-+ Load Bone Cape forCTAG face2|4 Audio Card with Bone-Cape-Manager
++ Load Bone Cape for CTAG face2|4 Audio Card with Bone-Cape-Manager
 ```bash
 sh -c "echo 'BBB-AD193X-8TDM' > /sys/devices/platform/bone_capemgr/slots"
 ```
