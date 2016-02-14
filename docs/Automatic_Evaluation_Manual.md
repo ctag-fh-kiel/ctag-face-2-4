@@ -1,4 +1,4 @@
-# User Guide for Automatic Evaluation
+# Manual for Automatic Evaluation
 
 ## Test Prerequisites
 + ADC1 needs to be connected with DAC1 (loopback)
