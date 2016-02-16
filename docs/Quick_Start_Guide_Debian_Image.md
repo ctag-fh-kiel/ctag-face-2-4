@@ -10,6 +10,9 @@ Password: temppwd
 
 ### Global Soundcard Configuration
 The required kernel modules will be loaded automatically at boot time (see /etc/rc.local).<br>
+By default the soundcard is configured to use 4 input channels and 8 output channels.<br>
+If a higher sampling rate of 192 kHz is needed, the soundcard can be configured to use only 4 output channels.<br>
+(Change line 22 in /etc/rc.local<br>**sh -c "echo 'BBB-AD193X-8TDM' > /sys/devices/platform/bone_capemgr/slots"** to<br>**sh -c "echo 'BBB-AD193X-4TDM' > /sys/devices/platform/bone_capemgr/slots"**)<br>
 The global ALSA configuration /etc/asound.conf contains routings to interact with single ADCs and DACs (ADC1 - ADC2, DAC1 - DAC4)
 
 ### Soundcard Control
