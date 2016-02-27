@@ -4,7 +4,7 @@
 
 + Install required build tools
 ```bash
-sudo apt-get install gcc-arm-linux-gnueabi git lzop libssl-dev libncurses5-dev wget u-boot-tools
+sudo apt-get install gcc-arm-linux-gnueabi git lzop libssl-dev libncurses5-dev wget u-boot-tools git
 ```
 + Clone Git repository of forked Linux kernel
 ```bash
@@ -18,15 +18,7 @@ make mrproper && mkdir modules_tmp
 ```bash
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- bb.org_defconfig
 ```
-+ *Download realtime patch (optional)*
-```bash
-wget https://www.kernel.org/pub/linux/kernel/projects/rt/4.1/patch-4.1.10-rt11.patch.xz
-```
-+ *Apply realtime patch (optional, not recommended)*
-```bash
-xzcat ../patch-4.1.10-rt11.patch.xz | patch -p1
-```
-+ *Make some custom configurations, e.g. enable realtime scheduler (optional, not recommended)*
++ Enable driver for CTAG face2|4 Audio Card (→ Device Drivers → Sound card support → Advanced Linux Sound Architecture → ALSA for SoC audio support → SoC Audio Support for CTAG face-2-4 Audio Card (AD1938))
 ```bash
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- menuconfig
 ```
@@ -48,59 +40,46 @@ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- INSTALL_MOD_PATH=modules_tmp modu
 ```
 + Copy kernel image to SD card
 ```bash
-cp arch/arm/boot/zImage ~/rootfs/boot/vmlinuz-4.1.10+
+sudo cp arch/arm/boot/zImage /media/$USER/rootfs/boot/vmlinuz-4.1.18+
 ```
 + Copy kernel modules to SD card
 ```bash
-cp -r modules_tmp/lib/ ~/mnt/rootfs/
+sudo cp -r modules_tmp/lib/ /media/$USER/rootfs/
 ```
 + Copy device tree blobs to SD card
 ```bash
-mkdir -p ~/mnt/rootfs/boot/dtbs/4.1.10+ && cp -r arch/arm/boot/dts/*.dtb ~/mnt/rootfs/boot/dtbs/4.1.10+/
+sudo mkdir -p /media/$USER/rootfs/boot/dtbs/4.1.18+ && cp -r arch/arm/boot/dts/*.dtb /media/$USER/rootfs/boot/dtbs/4.1.18+/
 ```
 + Copy kernel configuration to SD card
 ```bash
-cp .config ~/mnt/rootfs/boot/config-4.1.10+
+sudo cp .config /media/$USER/rootfs/boot/config-4.1.18+
 ```
-+ Copy Bone Cape for CTAG face2|4 Audio Card to SD card
+## The next steps must be executed directly on the BeagleBone Black/Green
++ Clone git repo with device tree overlays for CTAG face2|4 AudioCard
 ```bash
-cp BBB-AD193X-* ~/mnt/rootfs/root
+git clone https://github.com/henrix/CTAG-face-2-4-Bone-Capes
 ```
 + Insert the following line into **/boot/uEnv.txt** to use the new kernel
 ```bash
-uname_r=4.1.10+
+uname_r=4.1.18+
 ```
 + Insert the following line into **/boot/uEnv.txt** to use the custom device tree blob
-```bash 
-dtb=am335x-bonegreen-audiocard.dtb
+```bash
+dtb=am335x-bonegreen-ctag-face.dtb
 ```
 + Clone offical BeagleBone Cape Git repository, install device tree compiler, generate initramfs image and reboot
 ```bash
 git clone https://github.com/beagleboard/bb.org-overlays && cd ./bb.org-overlays
 ./dtc-overlay.sh
 ./install.sh
+reboot
 ```
 + Compile Bone Cape for CTAG face2|4 Audio Card
 ```bash
-dtc -O dtb -o BBB-AD193X-8TDM-00A0.dtbo -b 0 -@ BBB-AD193X-8TDM-00A0.dts
-mv BBB-AD193X-8TDM-00A0.dtbo /lib/firmware
+dtc -O dtb -o BB-CTAG-FACE-8CH-00A0.dtbo -b 0 -@ BB-CTAG-FACE-8CH-00A0.dts
+sudo mv BB-CTAG-FACE-8CH-00A0.dtbo /lib/firmware
 ```
 + Load Bone Cape for CTAG face2|4 Audio Card with Bone-Cape-Manager
 ```bash
-sh -c "echo 'BBB-AD193X-8TDM' > /sys/devices/platform/bone_capemgr/slots"
+sudo sh -c "echo 'BB-CTAG-FACE-8CH' > /sys/devices/platform/bone_capemgr/slots"
 ```
-
-<!---
-This is [on GitHub](https://github.com/jbt/markdown-editor) so let me know if I've b0rked it somewhere.
-
-
-Props to Mr. Doob and his [code editor](http://mrdoob.com/projects/code-editor/), from which
-the inspiration to this, and some handy implementation hints, came.
-
-### Stuff used to make this:
-
- * [markdown-it](https://github.com/markdown-it/markdown-it) for Markdown parsing
- * [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
- * [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks
- * [js-deflate](https://github.com/dankogai/js-deflate) for gzipping of data to make it fit in URLs
--->
