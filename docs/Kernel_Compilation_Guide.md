@@ -55,10 +55,6 @@ sudo mkdir -p /media/$USER/rootfs/boot/dtbs/4.1.18+ && cp -r arch/arm/boot/dts/*
 sudo cp .config /media/$USER/rootfs/boot/config-4.1.18+
 ```
 ## The next steps must be executed directly on the BeagleBone Black/Green
-+ Clone git repo with device tree overlays for CTAG face2|4 AudioCard
-```bash
-git clone https://github.com/henrix/CTAG-face-2-4-Bone-Capes
-```
 + Insert the following line into **/boot/uEnv.txt** to use the new kernel
 ```bash
 uname_r=4.1.18+
@@ -74,12 +70,16 @@ git clone https://github.com/beagleboard/bb.org-overlays && cd ./bb.org-overlays
 ./install.sh
 reboot
 ```
-+ Compile Bone Cape for CTAG face2|4 Audio Card
++ Clone CTAG face2|4 AudioCard repo
+```bash
+git clone https://github.com/ctag-fh-kiel/ctag-face-2-4.git && cd ctag-face-2-4/device-tree-overlays
+```
++ Compile Device Tree Overlays for CTAG face2|4 Audio Card
 ```bash
 dtc -O dtb -o BB-CTAG-FACE-8CH-00A0.dtbo -b 0 -@ BB-CTAG-FACE-8CH-00A0.dts
 sudo mv BB-CTAG-FACE-8CH-00A0.dtbo /lib/firmware
 ```
-+ Load Bone Cape for CTAG face2|4 Audio Card with Bone-Cape-Manager
++ Load kernel modules for CTAG face2|4 Audio Card with Bone-Cape-Manager
 ```bash
 sudo sh -c "echo 'BB-CTAG-FACE-8CH' > /sys/devices/platform/bone_capemgr/slots"
 ```
