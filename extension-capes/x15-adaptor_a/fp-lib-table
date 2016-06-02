@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name HiroseFX)(type KiCad)(uri "$(KIPRJMOD)\\HiroseFX.pretty")(options "")(descr ""))
+  (lib (name modules)(type KiCad)(uri C:\usr\Elektronik\ctag-face-2-4\codec-board\libs\modules.pretty)(options "")(descr ""))
 )
