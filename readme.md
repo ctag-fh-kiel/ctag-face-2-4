@@ -40,6 +40,7 @@ Assembly
 Extensions
 -------------
 - Created cape for Beagle Bone Green / Black including digital isolators to reduce noise (BBG-cape)
+- Beagle Board X15 break out adapters for Hirose headers
 
 Revisions
 -------------
@@ -56,6 +57,9 @@ Revisions
   - Rev. A 
      - Initial Revision
     - Known Bugs: -
+- X15 adaptor
+  - Rev. A
+     - Initial Revision, thanks to Michael Welling for review
 	 
 License
 -------
