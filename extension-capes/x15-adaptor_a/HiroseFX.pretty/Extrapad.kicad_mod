@@ -1,0 +1,9 @@
+(module Extrapad (layer F.Cu) (tedit 5753C116)
+  (fp_text reference REF** (at -0.5 2) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value Extrapad (at 0.5 -2) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad ~ thru_hole circle (at 0 0) (size 1.6 1.6) (drill 1.1) (layers *.Cu *.Mask F.SilkS))
+)
