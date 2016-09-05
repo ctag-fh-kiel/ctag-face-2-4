@@ -57,8 +57,7 @@ Revisions
 - BBG-cape
   - Rev. A 
      - Initial Revision
-    - Known Bugs: 
-	 - 
+    - Known Bugs: -
 - X15 adaptor
   - Rev. A
      - Initial Revision, thanks to Michael Welling for review
