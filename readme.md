@@ -47,7 +47,8 @@ Revisions
 - face2|4
   - Rev. A 
      - Initial Revision
-    - Known Bugs: -
+    - Known Bugs: 
+	 - Wrong polarity on IN2 at ADC2RP ADC2RN --> results in wrong phase and sound cancellation, needs fix
   - Todos for next Rev.
      - Possibly simplify power supply
      - Remove option to choose bias output from codec --> simplify board
@@ -57,7 +58,7 @@ Revisions
   - Rev. A 
      - Initial Revision
     - Known Bugs: 
-	 - Wrong polarity on IN2 at ADC2RP ADC2RN --> results in wrong phase and sound cancellation, needs fix
+	 - 
 - X15 adaptor
   - Rev. A
      - Initial Revision, thanks to Michael Welling for review
