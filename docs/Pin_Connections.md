@@ -25,11 +25,11 @@
 | DSDATA1                | 18           | P9.28 Mode 2 | mcasp0_axr2     | SPI1_CS0     |
 | ASDATA1                | 3            | P9.30 Mode 0 | mcasp0_axr0     | SPI1_D1      |
 | spi5                   | TBD          | P8.31 Mode 7 | spi_cs1         | GPIO0_10     |
-| spi4                   | TDB          | P8.17 Mode 7 | spi_cs0         | GPIO0_27     |
-| spi3                   | TDB          | P8.32 Mode 7 | spi_clk         | GPIO0_11     |
-| spi2                   | TDB          | P8.14 Mode 7 | spi_miso        | GPIO0_26     |
-| spi1                   | TDB          | P8.33 Mode 7 | spi_mosi        | GPIO0_9      |
-| RESET_IN               | TDB          | P8.34 Mode 7 | gpio2[17]       | GPIO2_17     |
+| spi4                   | TBD          | P8.17 Mode 7 | spi_cs0         | GPIO0_27     |
+| spi3                   | TBD          | P8.32 Mode 7 | spi_clk         | GPIO0_11     |
+| spi2                   | TBD          | P8.14 Mode 7 | spi_miso        | GPIO0_26     |
+| spi1                   | TBD          | P8.33 Mode 7 | spi_mosi        | GPIO0_9      |
+| RESET_IN               | TBD          | P8.34 Mode 7 | gpio2[17]       | GPIO2_17     |
 
 
 
