@@ -74,13 +74,23 @@
 			#address-cells = <1>;
 			#size-cells = <0>;
 
-			ad193x: ad193x@1{
+			ad193x_master: ad193x@0{
 				#address-cells = <1>;
 				#size-cells = <0>;
 
 				compatible = "analog,ad1938";
 
-				reg = <1>; //corresponds to cs
+				reg = <0>; //corresponds to cs
+				spi-max-frequency = <100000>;
+			};
+
+			ad193x_aux: ad193x@1{
+				#address-cells = <1>;
+				#size-cells = <0>;
+
+				compatible = "analog,ad1938-dc";
+
+				reg = <1>;
 				spi-max-frequency = <100000>;
 			};
 		};
@@ -95,7 +105,7 @@
 			status = "okay";
 
 			op-mode = <0>;	/* MCASP_IIS_MODE */
-			tdm-slots = <8>;
+			tdm-slots = <16>;
 			num-serializer = <16>;
 			serial-dir = <  /* 0: INACTIVE, 1: TX, 2: RX */
 				2 0 1 0
@@ -115,9 +125,10 @@
 			sound {
 				compatible = "ctag,face-2-4";
 				model = "CTAG face-2-4 8CH";
-				audio-codec = <&ad193x>;
+				audio-codec = <&ad193x_master>;
+				audio-codec-aux = <&ad193x_aux>;
 				mcasp-controller = <&mcasp0>;
-				audiocard-tdm-slots = <8>;
+				audiocard-tdm-slots = <16>;
 				codec-clock-rate = <24576000>;
 				cpu-clock-rate = <24576000>;
 				bb-device = <0>; //BBB/BBG
@@ -126,8 +137,14 @@
 					"Line Out",             "DAC2OUT",
 					"Line Out",             "DAC3OUT",
 					"Line Out",             "DAC4OUT",
+					"Line Out",             "DAC5OUT",
+					"Line Out",             "DAC6OUT",
+					"Line Out",             "DAC7OUT",
+					"Line Out",             "DAC8OUT",
 					"ADC1IN",               "Line In",
-					"ADC2IN",               "Line In";
+					"ADC2IN",               "Line In",
+					"ADC3IN",               "Line In",
+					"ADC4IN",               "Line In";
 			};
 		};
 	};
