@@ -14,7 +14,7 @@
 	compatible = "ti,beaglebone", "ti,beaglebone-black", "ti,beaglebone-green";
 
 	/* identification */
-	part-number = "BB-CTAG-SW-8CH";
+	part-number = "BB-CTAG-SW-16CH";
 	version = "00A0", "A0";
 
 	/* state the resources this cape uses */
@@ -124,7 +124,7 @@
 
 			sound {
 				compatible = "ctag,face-2-4";
-				model = "CTAG face-2-4 8CH";
+				model = "CTAG face-2-4 16CH";
 				audio-codec = <&ad193x_master>;
 				audio-codec-aux = <&ad193x_aux>;
 				mcasp-controller = <&mcasp0>;
@@ -137,14 +137,14 @@
 					"Line Out",             "DAC2OUT",
 					"Line Out",             "DAC3OUT",
 					"Line Out",             "DAC4OUT",
-					"Line Out",             "DAC5OUT",
-					"Line Out",             "DAC6OUT",
-					"Line Out",             "DAC7OUT",
-					"Line Out",             "DAC8OUT",
+					//"Line Out",             "DAC5OUT",
+					//"Line Out",             "DAC6OUT",
+					//"Line Out",             "DAC7OUT",
+					//"Line Out",             "DAC8OUT",
 					"ADC1IN",               "Line In",
-					"ADC2IN",               "Line In",
-					"ADC3IN",               "Line In",
-					"ADC4IN",               "Line In";
+					"ADC2IN",               "Line In";
+					//"ADC3IN",               "Line In",
+					//"ADC4IN",               "Line In";
 			};
 		};
 	};
