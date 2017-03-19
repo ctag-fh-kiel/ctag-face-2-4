@@ -1,5 +1,5 @@
 #! /bin/sh
-# /etc/init.d/ctag-face
+# /etc/init.d/ctag-beast
 #
 
 case "$1" in
@@ -8,7 +8,7 @@ case "$1" in
     echo BB-CTAG-SW-16CH > /sys/devices/platform/bone_capemgr/slots
     ;;
   *)
-    echo "Usage: /etc/init.d/ctag-face {start}"
+    echo "Usage: /etc/init.d/ctag-beast {start}"
     exit 1
     ;;
 esac
