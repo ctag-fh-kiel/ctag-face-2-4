@@ -1,0 +1,16 @@
+#! /bin/sh
+# /etc/init.d/ctag-face
+#
+
+case "$1" in
+  start)
+    echo "Loading CTAG face2|4 Overlay..."
+    echo BB-CTAG-SW-8CH > /sys/devices/platform/bone_capemgr/slots
+    ;;
+  *)
+    echo "Usage: /etc/init.d/ctag-face {start}"
+    exit 1
+    ;;
+esac
+
+exit 0
