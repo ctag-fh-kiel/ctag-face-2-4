@@ -2,13 +2,18 @@
 
 *The build instructions were tested on Ubuntu 14.04.*
 
-+ Install required build tools
++ Install build tools
 ```bash
-sudo apt-get install gcc-arm-linux-gnueabi git lzop libssl-dev libncurses5-dev wget u-boot-tools git
+sudo apt-get install git lzop libssl-dev libncurses5-dev wget u-boot-tools git
 ```
 + Clone Git repository of forked Linux kernel
 ```bash
 git clone https://github.com/henrix/beagle-linux.git && cd beagle-linux
+```
++ Download hard float linearo compiler
+```bash
+wget https://releases.linaro.org/components/toolchain/binaries/5.4-2017.01/arm-linux-gnueabihf/gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf.tar.xz
+tar xf gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf.tar.xz
 ```
 + Clean build directory and create temporary directory
 ```bash
@@ -16,27 +21,27 @@ make mrproper && mkdir modules_tmp
 ```
 + Generate kernel config
 ```bash
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- bb.org_defconfig
+make ARCH=arm CROSS_COMPILE=gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- bb.org_defconfig
 ```
 + Enable driver for CTAG face2|4 Audio Card (→ Device Drivers → Sound card support → Advanced Linux Sound Architecture → ALSA for SoC audio support → SoC Audio Support for CTAG face-2-4 Audio Card (AD1938))
 ```bash
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- menuconfig
+make ARCH=arm CROSS_COMPILE=gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- menuconfig
 ```
 + Compile the kernel
 ```bash
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- -j9
+make ARCH=arm CROSS_COMPILE=gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- -j9
 ```
 + Compile U-Boot image and device tree blobs
 ```bash
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- uImage dtbs LOADADDR=0x80008000 -j9
+make ARCH=arm CROSS_COMPILE=gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j9
 ```
 + Compile kernel modules
 ```bash
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- modules -j9
+make ARCH=arm CROSS_COMPILE=gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- modules -j9
 ```
 + Install compiled kernel and modules to temporary directory
 ```bash
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- INSTALL_MOD_PATH=modules_tmp modules_install
+make ARCH=arm CROSS_COMPILE=gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- INSTALL_MOD_PATH=modules_tmp modules_install
 ```
 + Copy kernel image to SD card
 ```bash
