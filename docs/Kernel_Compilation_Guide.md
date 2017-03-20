@@ -63,7 +63,11 @@ uname_r=4.1.18+
 ```bash
 dtb=am335x-bonegreen-ctag-face.dtb
 ```
-+ Generate initramfs image and reboot
++ Reboot to use new kernel
+```bash
+reboot
+```
++ Generate initramfs image and reboot again
 ```bash
 sudo update-initramfs -c -k $(uname -r)
 reboot
