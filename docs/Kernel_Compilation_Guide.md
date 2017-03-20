@@ -63,11 +63,9 @@ uname_r=4.1.18+
 ```bash
 dtb=am335x-bonegreen-ctag-face.dtb
 ```
-+ Clone offical BeagleBone Cape Git repository, install device tree compiler, generate initramfs image and reboot
++ Generate initramfs image and reboot
 ```bash
-git clone https://github.com/beagleboard/bb.org-overlays && cd ./bb.org-overlays
-./dtc-overlay.sh
-./install.sh
+sudo update-initramfs -c -k $(uname -r)
 reboot
 ```
 + Clone CTAG face2|4 AudioCard repo
