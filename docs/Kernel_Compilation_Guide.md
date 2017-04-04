@@ -33,7 +33,7 @@ make ARCH=arm CROSS_COMPILE=gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf/
 ```
 + Compile U-Boot image and device tree blobs
 ```bash
-make ARCH=arm CROSS_COMPILE=gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- uImage dtbs LOADADDR=0x80008000 -j9
+make ARCH=arm CROSS_COMPILE=gcc-linaro-5.4.1-2017.01-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- dtbs -j9
 ```
 + Compile kernel modules
 ```bash
