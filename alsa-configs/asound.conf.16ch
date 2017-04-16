@@ -1,0 +1,208 @@
+defaults.pcm.rate_converter "speexrate_best"
+
+pcm.snd-card {
+    type hw
+    card 0
+    device 0
+}
+
+ctl.snd-card {
+    type hw
+    card 0
+    device 0
+}
+
+pcm.!default {
+    type plug
+    # slave.pcm "duplex"
+    slave.pcm "snd-card"
+}
+
+pcm.DAC1 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 16
+    }
+    ttable.0.0 1
+    ttable.1.1 1
+}
+
+pcm.ADC1 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 8
+    }
+    ttable.0.0 1
+    ttable.1.1 1
+}
+
+pcm.DAC2 {
+    type route
+    slave {
+    	pcm "hw:0,0"
+    	channels 16
+    }
+    ttable.0.2 1
+    ttable.1.3 1
+}
+
+pcm.ADC2 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 8
+    }
+    ttable.0.2 1
+    ttable.1.3 1
+}
+
+pcm.DAC3 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 16
+    }
+    ttable.0.4 1
+    ttable.1.5 1
+}
+
+pcm.ADC3 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 8
+    }
+    ttable.0.4 1
+    ttable.1.5 1
+}
+
+
+pcm.DAC4 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 16
+    }
+    ttable.0.6 1
+    ttable.1.7 1
+}
+
+
+pcm.ADC4 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 8
+    }
+    ttable.0.6 1
+    ttable.1.7 1
+}
+
+
+pcm.DAC5 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 16
+    }
+    ttable.0.8 1
+    ttable.1.9 1
+}
+
+
+pcm.DAC6 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 16
+    }
+    ttable.0.10 1
+    ttable.1.11 1
+}
+
+
+pcm.DAC7 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 16
+    }
+    ttable.0.12 1
+    ttable.1.13 1
+}
+
+
+pcm.DAC8 {
+    type route
+    slave {
+        pcm "hw:0,0"
+        channels 16
+    }
+    ttable.0.14 1
+    ttable.1.15 1
+}
+
+
+pcm.dmixer {
+    type dmix
+    ipc_key 1024
+    slave {
+	pcm "hw:0,0"
+	period_time 0
+        period_size 256
+        buffer_size 512
+        rate 48000
+        format S32_LE
+        channels 16
+    }
+    bindings {
+        0 0
+        1 1
+        2 2
+        3 3
+        4 4
+        5 5
+        6 6
+        7 7
+        8 8
+        9 9
+        10 10
+        11 11
+        12 12
+        13 13
+        14 14
+        15 15
+    }
+}
+
+pcm.dsnooper {
+    type dsnoop
+    ipc_key 2048
+    slave {
+        pcm "hw:0,0"
+        period_time 0
+        period_size 256
+        buffer_size 512
+        rate 48000
+        format S32_LE
+        channels 8
+    }
+    bindings {
+	   0 0
+	   1 1
+	   2 2
+	   3 3
+       4 4
+       5 5
+       6 6
+       7 7
+    }
+}
+
+pcm.duplex {
+    type asym
+    playback.pcm "dmixer"
+    capture.pcm "dsnooper"
+}
