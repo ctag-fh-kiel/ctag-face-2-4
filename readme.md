@@ -8,7 +8,7 @@ Board information
 - 4 layer PCB including ground and power plane
 - 10mil tracks offering close to 50Ohms impedance
 - We used http://dirtypcbs.com/ to manufacture the board with good experiences
-  - You may order it there under this shortlink http://dirtypcbs.com/view.php?share=13783&accesskey=c1dd3754f4a36b5ddce1bc031594a45b
+  - You may order it there under this shortlink [http://dirtypcbs.com/store/designer/details/8229/890/ctag-face2-4](http://dirtypcbs.com/store/designer/details/8229/890/ctag-face2-4)
 - Part sizes on board are chosen to allow for hand-soldering 0603 as standard size for resistors etc.
 - Used http://kicad-pcb.org/ for board design
 - Board has 3 logical sections
