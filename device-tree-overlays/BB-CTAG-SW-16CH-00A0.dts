@@ -54,10 +54,10 @@
 			audiocard_spi_pins: pinmux_audiocard_spi_pins { 
 				pinctrl-single,pins = <
 					0x0DC 0x37		/* spi_sclk, 	MODE7 | INPUT_PULLUP | SPI_SCLK P8_32 */
-                    0x028 0x37		/* spi_miso, 	MODE7 | INPUT_PULLUP | SPI_MISO P8_14 */
-                    0x0D4 0x17		/* spi_mosi, 	MODE7 | OUTPUT_PULLUP | SPI_MOSI P8_33 */
-                    0x02C 0x17		/* spi_cs0, 	MODE7 | OUTPUT_PULLUP | SPI_CS0 P8_17 */
-					0x0D8 0x17		/* spi_cs1,		MODE7 | OUTPUT_PULLUP | SPI_CS1 P8_31 */
+                    			0x028 0x37		/* spi_miso, 	MODE7 | INPUT_PULLUP | SPI_MISO P8_14 */
+                    			0x0D4 0x17		/* spi_mosi, 	MODE7 | OUTPUT_PULLUP | SPI_MOSI P8_33 */
+                    			0x02C 0x17		/* spi_cs0, 	MODE7 | OUTPUT_PULLUP | SPI_CS0 P8_17 */
+					0x0D8 0x17		/* spi_cs1,	MODE7 | OUTPUT_PULLUP | SPI_CS1 P8_31 */
 				>;
 			};
 		};
@@ -73,6 +73,11 @@
 			/* avoid dtc warnings */
 			#address-cells = <1>;
 			#size-cells = <0>;
+
+			gpio-sck = <&gpio0 11 0>; 		//P8.32
+			gpio-mosi = <&gpio0 9 0>;		//P8.33
+			gpio-miso = <&gpio0 26 0>;		//P8.14
+			cs-gpios = <&gpio0 27 0 &gpio0 10 0>; 	//P8.17 / P8.31
 
 			ad193x_master: ad193x@0{
 				#address-cells = <1>;
