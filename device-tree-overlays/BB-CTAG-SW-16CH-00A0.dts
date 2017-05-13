@@ -140,8 +140,8 @@
 				audio-codec-bit-delay-adc = <0>;
 				audio-codec-aux-bit-delay-dac = <0>;
 				audio-codec-aux-bit-delay-adc = <0>;
-				mcasp-controller-bit-delay-tx <0>;
-				mcasp-controller-bit-delay-rx <0>;
+				mcasp-controller-bit-delay-tx = <0>;
+				mcasp-controller-bit-delay-rx = <0>;
 				bb-device = <0>; //BBB/BBG
 				audio-routing =
 					"Line Out",             "DAC1OUT",
