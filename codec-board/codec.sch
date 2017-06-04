@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:ctag-face-2-4-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors

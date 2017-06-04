@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:ctag-face-2-4-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -155,7 +156,7 @@ F 3 "" H 6450 4550 60  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L LED D204
+L LED-RESCUE-ctag-face-2-4 D204
 U 1 1 561E12A3
 P 2300 4800
 F 0 "D204" H 2300 4900 50  0000 C CNN
@@ -309,7 +310,7 @@ F 3 "" H 6450 6300 60  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L LED D205
+L LED-RESCUE-ctag-face-2-4 D205
 U 1 1 561E2080
 P 2300 6550
 F 0 "D205" H 2300 6650 50  0000 C CNN
@@ -419,7 +420,7 @@ F 3 "" H 2150 2950 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L LED D203
+L LED-RESCUE-ctag-face-2-4 D203
 U 1 1 561E5419
 P 1750 3050
 F 0 "D203" H 1750 3150 50  0000 C CNN
