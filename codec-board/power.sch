@@ -37,8 +37,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 10
 Title "face 2|4"
-Date "2016"
-Rev "A"
+Date "2017"
+Rev "A2"
 Comp "2015"
 Comment1 "Robert Manzke"
 Comment2 ""

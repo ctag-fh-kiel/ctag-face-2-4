@@ -37,8 +37,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 10
 Title "face 2|4"
-Date "2016"
-Rev "A"
+Date "2017"
+Rev "A2"
 Comp "2015"
 Comment1 "Robert Manzke"
 Comment2 ""
@@ -99,8 +99,8 @@ F0 "adc-stereo-buffer-2" 60
 F1 "adc-stereo-buffer.sch" 60
 F2 "ADCLN" O R 3250 3350 60 
 F3 "ADCLP" O R 3250 3250 60 
-F4 "ADCRN" O R 3250 3450 60 
-F5 "ADCRP" O R 3250 3550 60 
+F4 "ADCRN" O R 3250 3550 60 
+F5 "ADCRP" O R 3250 3450 60 
 F6 "RIN" I L 2550 3250 60 
 F7 "LIN" I L 2550 3350 60 
 F8 "BIAS" I L 2550 3700 60 

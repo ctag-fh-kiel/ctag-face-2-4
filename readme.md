@@ -44,10 +44,11 @@ Extensions
 Revisions
 -------------
 - face2|4
-  - Rev. A 
-     - Initial Revision
+  - Rev. A2
+     - Fixed polarity bug on IN2 at ADC2RP ADC2RN
     - Known Bugs: 
-	 - Wrong polarity on IN2 at ADC2RP ADC2RN --> results in wrong phase and sound cancellation, needs fix
+	 - none
+	 - Rev. A has polarity bug on IN2
   - Todos for next Rev.
      - Possibly simplify power supply
      - Remove option to choose bias output from codec --> simplify board
