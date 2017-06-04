@@ -7,7 +7,6 @@ Board information
 -----------------
 - 4 layer PCB including ground and power plane
 - 10mil tracks offering close to 50Ohms impedance
-- You may order the Rev. A board (!!contains IN2 bug!!) under this shortlink at [DirtyPCBs](http://dirtypcbs.com/store/designer/details/8229/890/ctag-face2-4)
 - Part sizes on board are chosen to allow for hand-soldering 0603 as standard size for resistors etc.
 - Used http://kicad-pcb.org/ for board design
 - Board has 3 logical sections
