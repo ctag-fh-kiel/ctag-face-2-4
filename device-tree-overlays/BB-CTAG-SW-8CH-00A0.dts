@@ -53,9 +53,9 @@
 			audiocard_spi_pins: pinmux_audiocard_spi_pins { 
 				pinctrl-single,pins = <
 					0x0DC 0x37		/* spi_sclk, 	MODE7 | INPUT_PULLUP | SPI_SCLK P8_32 */
-                    			0x028 0x37		/* spi_miso, 	MODE7 | INPUT_PULLUP | SPI_MISO P8_14 */
-                    			0x0D4 0x17		/* spi_mosi, 	MODE7 | OUTPUT_PULLUP | SPI_MOSI P8_33 */
-                    			0x02C 0x17		/* spi_cs0, 	MODE7 | OUTPUT_PULLUP | SPI_CS0 P8_17 */
+                    0x028 0x37		/* spi_miso, 	MODE7 | INPUT_PULLUP | SPI_MISO P8_14 */
+                    0x0D4 0x17		/* spi_mosi, 	MODE7 | OUTPUT_PULLUP | SPI_MOSI P8_33 */
+                    0x02C 0x17		/* spi_cs0, 	MODE7 | OUTPUT_PULLUP | SPI_CS0 P8_17 */
 				>;
 			};
 		};
@@ -118,10 +118,10 @@
 				audiocard-tdm-slots = <8>;
 				codec-clock-rate = <24576000>;
 				cpu-clock-rate = <24576000>;
-				audio-codec-bit-delay-dac = <1>;
-				audio-codec-bit-delay-adc = <0>;
-				mcasp-controller-bit-delay-tx = <0>;
-				mcasp-controller-bit-delay-rx = <0>;
+				audio-codec-bit-delay-dac = <1>; //currently only supports 1 or 0 bit delay
+				audio-codec-bit-delay-adc = <1>;
+				mcasp-controller-bit-delay-tx = <1>;
+				mcasp-controller-bit-delay-rx = <1>;
 				bb-device = <0>; //BBB/BBG
 				audio-routing =
 					"Line Out",             "DAC1OUT",
