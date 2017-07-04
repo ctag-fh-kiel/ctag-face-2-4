@@ -7,7 +7,6 @@ Board information
 -----------------
 - 4 layer PCB including ground and power plane
 - 10mil tracks offering close to 50Ohms impedance
-- You may order it under this shortlink at [DirtyPCBs](http://dirtypcbs.com/store/designer/details/8229/890/ctag-face2-4)
 - Part sizes on board are chosen to allow for hand-soldering 0603 as standard size for resistors etc.
 - Used http://kicad-pcb.org/ for board design
 - Board has 3 logical sections
@@ -44,10 +43,11 @@ Extensions
 Revisions
 -------------
 - face2|4
-  - Rev. A 
-     - Initial Revision
+  - Rev. A2
+     - Fixed polarity bug on IN2 at ADC2RP ADC2RN
     - Known Bugs: 
-	 - Wrong polarity on IN2 at ADC2RP ADC2RN --> results in wrong phase and sound cancellation, needs fix
+	 - none
+	 - Rev. A has polarity bug on IN2
   - Todos for next Rev.
      - Possibly simplify power supply
      - Remove option to choose bias output from codec --> simplify board

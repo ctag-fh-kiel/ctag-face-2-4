@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:ctag-face-2-4-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,8 +37,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 10
 Title "face 2|4"
-Date "2016"
-Rev "A"
+Date "2017"
+Rev "A2"
 Comp "www.creative-technologies.de"
 Comment1 "Robert Manzke"
 Comment2 ""
@@ -145,5 +146,5 @@ F 3 "" H 2800 4800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 750  7600 0    118  ~ 0
-(c) 2016 by Robert Manzke\nwww.creative-technologies.de \n(robert.manzke@fh-kiel.de)\n\nCTAG face 2|4  is licensed under \nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 \nInternational License (CC-BY-SA-NC v4.0)\n\n
+(c) 2016,17 by Robert Manzke\nwww.creative-technologies.de \n(robert.manzke@fh-kiel.de)\n\nCTAG face 2|4  is licensed under \nCreative Commons Attribution-NonCommercial-ShareAlike 4.0 \nInternational License (CC-BY-SA-NC v4.0)\n\n
 $EndSCHEMATC
