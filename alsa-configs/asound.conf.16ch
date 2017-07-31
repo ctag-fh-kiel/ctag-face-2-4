@@ -34,8 +34,8 @@ pcm.ADC1 {
         pcm "hw:0,0"
         channels 8
     }
-    ttable.0.0 1
-    ttable.1.1 1
+    ttable.0.4 1
+    ttable.1.5 1
 }
 
 pcm.DAC2 {
@@ -54,8 +54,8 @@ pcm.ADC2 {
         pcm "hw:0,0"
         channels 8
     }
-    ttable.0.2 1
-    ttable.1.3 1
+    ttable.0.6 1
+    ttable.1.7 1
 }
 
 pcm.DAC3 {
@@ -74,10 +74,9 @@ pcm.ADC3 {
         pcm "hw:0,0"
         channels 8
     }
-    ttable.0.4 1
-    ttable.1.5 1
+    ttable.0.0 1
+    ttable.1.1 1
 }
-
 
 pcm.DAC4 {
     type route
@@ -89,17 +88,15 @@ pcm.DAC4 {
     ttable.1.7 1
 }
 
-
 pcm.ADC4 {
     type route
     slave {
         pcm "hw:0,0"
         channels 8
     }
-    ttable.0.6 1
-    ttable.1.7 1
+    ttable.0.2 1
+    ttable.1.3 1
 }
-
 
 pcm.DAC5 {
     type route
@@ -111,7 +108,6 @@ pcm.DAC5 {
     ttable.1.9 1
 }
 
-
 pcm.DAC6 {
     type route
     slave {
@@ -122,7 +118,6 @@ pcm.DAC6 {
     ttable.1.11 1
 }
 
-
 pcm.DAC7 {
     type route
     slave {
@@ -132,7 +127,6 @@ pcm.DAC7 {
     ttable.0.12 1
     ttable.1.13 1
 }
-
 
 pcm.DAC8 {
     type route

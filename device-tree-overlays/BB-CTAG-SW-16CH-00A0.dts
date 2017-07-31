@@ -148,9 +148,9 @@
 					//"Line Out",             "DAC7OUT",
 					//"Line Out",             "DAC8OUT",
 					"ADC1IN",               "Line In",
-					"ADC2IN",               "Line In";
-					//"ADC3IN",               "Line In",
-					//"ADC4IN",               "Line In";
+					"ADC2IN",               "Line In",
+					"ADC3IN",               "Line In",
+					"ADC4IN",               "Line In";
 			};
 		};
 	};
