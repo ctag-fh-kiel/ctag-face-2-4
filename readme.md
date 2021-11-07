@@ -8,7 +8,7 @@ Board information
 - 4 layer PCB including ground and power plane
 - 10mil tracks offering close to 50Ohms impedance
 - Part sizes on board are chosen to allow for hand-soldering 0603 as standard size for resistors etc.
-- Used http://kicad-pcb.org/ for board design
+- Used http://kicad.org/ for board design
 - Board has 3 logical sections
   - Power supply (digital, analog)
      - Includes separate 3.3V digital supply and 3.3V + 5V analog supply
